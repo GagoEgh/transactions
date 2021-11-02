@@ -1,0 +1,31 @@
+.wrap{
+    width: 900px;
+    margin: 50px auto;
+}
+
+.card{
+    text-align: center;
+}
+
+.card-header{
+    height: 50px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+
+.cards .card {
+    margin-top: 50px;
+}
+
+.cards .card .card-text{
+    text-align: left;
+    font-size: 20px;
+}
+
+.cards .btn{
+    width: 100px;
+}

@@ -1,0 +1,29 @@
+<div class="wrap">
+    <div class="card" style="width: 900px;">
+        <div class="card-header"></div>
+        <div class="card-body">
+            <h1 class="card-title ">WELCOME</h1>
+            <p class="card-text">
+                Some quick example text to build on the
+                card title and make up the bulk of the card's content.
+            </p>
+            <a class="btn btn-primary" (click)="goList()">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+            <p>You have <span>{{service?.transations?.length}}</span> transactions</p>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div *ngFor='let type of service.types,let ind = index'>
+            <div class="card" style="width: 400px;">
+                <div class="card-body">
+                    <p class="card-text"><strong class="strong">{{service?.transations|lengthByType:type}}</strong> </p>
+                    <p class="card-text">{{type}}</p>
+                    <a [routerLink]='["/navigator"]' [queryParams]="{'tab':ind}"
+                      class="btn btn-primary">See all</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
